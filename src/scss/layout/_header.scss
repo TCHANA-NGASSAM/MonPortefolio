@@ -7,16 +7,16 @@
     width: 100%;
     z-index: 100;
     display: flex;
-    justify-content: flex-end; // Pousse tout à droite
+    justify-content: flex-end;
     padding: 30px 10%;
 
     &__links {
         display: flex;
         gap: 40px;
         align-items: center;
-        
+
         a {
-            color: $white; // Liens blancs
+            color: $white;
             font-weight: 600;
             text-transform: capitalize;
         }
