@@ -1,0 +1,41 @@
+@import '../abstracts/variables';
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, $bg-light 0%, #e2e8f0 100%);
+    
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+        span { color: $primary-color; }
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: $text-light;
+        margin-bottom: 30px;
+    }
+
+    &__btns {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: $transition;
+}
+
+.btn-primary { background: $primary-color; color: $white; }
+.btn-primary:hover { background: darken($primary-color, 10%); }
+
+.btn-secondary { border: 2px solid $primary-color; color: $primary-color; }
+.btn-secondary:hover { background: $primary-color; color: $white; }

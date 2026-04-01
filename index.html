@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adriano21 | Portfolio - Architecture Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <a href="#">BONJOUR <span>A TOUS</span></a>
+            </div>
+
+            <ul class="navbar__links" id="nav-menu">
+                <li><a href="#home" class="active">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="navbar__burger" id="burger-menu" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero__content">
+                <h1>Bonjour, je suis <span>Adrien Ngassam</span></h1>
+                <p>Étudiant en Conception Architecture Digital</p>
+                <div class="hero__btns">
+                    <a href="#projects" class="btn-primary">Voir mes projets</a>
+                    <a href="assets/pdf/cv.pdf" class="btn-secondary" target="_blank">Mon CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about__grid">
+                <div class="about__text">
+                    <p>Actuellement étudiant étranger à Paris, je me spécialise en <strong>architecture web</strong>. Passionné par la création d'applications robustes et performantes, je maîtrise aussi bien le front-end que le back-end.</p>
+                    <div class="skills">
+                        <span class="skills__badge">PHP</span>
+                        <span class="skills__badge">JavaScript</span>
+                        <span class="skills__badge">React.js</span>
+                        <span class="skills__badge">SCSS</span>
+                        <span class="skills__badge">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects__grid">
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/img/artconnect.jpg" alt="Projet ArtConnect">
+                    </div>
+                    <div class="project-card__content">
+                        <h3>ArtConnect</h3>
+                        <p>Réseau social dédié aux artistes. Stack : JS, Node.js, SCSS.</p>
+                        <a href="#" class="btn-text">En savoir plus &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/img/project2.jpg" alt="Autre projet">
+                    </div>
+                    <div class="project-card__content">
+                        <h3>E-commerce PHP</h3>
+                        <p>Gestion de catalogue et panier dynamique en PHP natif et SQL.</p>
+                        <a href="#" class="btn-text">En savoir plus &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact container">
+            <h2 class="section-title">Me contacter</h2>
+            <p>Un projet ou une opportunité d'alternance ? Discutons-en !</p>
+            <form class="contact__form">
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Votre message" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Adrien Ngassam - Tous droits réservés.</p>
+        <div class="footer__socials">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://gitlab.com" target="_blank">GitLab</a>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>

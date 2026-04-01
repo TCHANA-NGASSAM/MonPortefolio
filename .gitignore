@@ -1,0 +1,15 @@
+# Dépendances
+node_modules/
+
+# Compilation
+.sass-cache/
+*.css.map
+dist/css/*.map
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
