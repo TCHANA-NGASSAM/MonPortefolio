@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adriano21 | Portfolio - Architecture Web</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
 <body>
 
     <header class="header">
         <nav class="navbar">
-            <div class="navbar__logo">
-                <a href="#">BONJOUR <span>A TOUS</span></a>
-            </div>
+        
 
             <ul class="navbar__links" id="nav-menu">
                 <li><a href="#home" class="active">Accueil</a></li>
@@ -31,22 +30,35 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero__content">
-                <h1>Bonjour, je suis <span>Adrien Ngassam</span></h1>
-                <p>Étudiant en Conception Architecture Digital</p>
-                <div class="hero__btns">
-                    <a href="#projects" class="btn-primary">Voir mes projets</a>
-                    <a href="assets/pdf/cv.pdf" class="btn-secondary" target="_blank">Mon CV</a>
-                </div>
+    
+<section id="home" class="hero">
+    <div class="hero__intro">
+        <div class="hero__logo">
+            <p>Bonjour</p>
+        </div>
+        <div class="hero__text-content">
+            <p class="hero__greet">Je suis</p>
+            <h1 class="hero__name">Adrien <span>TCHANA NGASSAM</span></h1>
+            <p class="hero__job">Etudiant en Conception Architecture Digital</p>
+            
+            <div class="hero__socials">
+                <a href="mailto:adrien@example.com" class="social-icon" aria-label="Envoyer un email"><i class="fa-solid fa-at"></i></a>
+                <a href="https://github.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-        </section>
+        </div>
+    </div>
+
+    <div class="hero__visual">
+        <img src="assets/img/photo.png" alt="Portrait d'Adrien" class="hero__photo">
+    </div>
+</section>
 
         <section id="about" class="about container">
             <h2 class="section-title">À propos de moi</h2>
             <div class="about__grid">
                 <div class="about__text">
-                    <p>Actuellement étudiant étranger à Paris, je me spécialise en <strong>architecture web</strong>. Passionné par la création d'applications robustes et performantes, je maîtrise aussi bien le front-end que le back-end.</p>
+                    <p>Actuellement étudiant à Paris, je me spécialise en <strong>Architecture Logiciel</strong>. Passionné par la création d'applications robustes et performantes, je maîtrise aussi bien le front-end que le back-end.de plus je m'interesse aussi au pratique DevOps et au Technologie Cloud</p>
                     <div class="skills">
                         <span class="skills__badge">PHP</span>
                         <span class="skills__badge">JavaScript</span>
@@ -63,10 +75,10 @@
             <div class="projects__grid">
                 <article class="project-card">
                     <div class="project-card__image">
-                        <img src="assets/img/artconnect.jpg" alt="Projet ArtConnect">
+                        <img src="assets/img/artconnect.svg" alt="Projet ArtConnect">
                     </div>
                     <div class="project-card__content">
-                        <h3>ArtConnect</h3>
+                        <h3>RFTP</h3>
                         <p>Réseau social dédié aux artistes. Stack : JS, Node.js, SCSS.</p>
                         <a href="#" class="btn-text">En savoir plus &rarr;</a>
                     </div>
@@ -74,7 +86,53 @@
 
                 <article class="project-card">
                     <div class="project-card__image">
-                        <img src="assets/img/project2.jpg" alt="Autre projet">
+                        <img src="assets/img/project2.svg" alt="Projet e-commerce PHP">
+                    </div>
+                    <div class="project-card__content">
+                        <h3>E-commerce PHP V2</h3>
+                        <p>Version orientee architecture avec gestion de stock et commande.</p>
+                        <a href="#" class="btn-text">En savoir plus &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/img/project2.svg" alt="Projet e-commerce PHP">
+                    </div>
+                    <div class="project-card__content">
+                        <h3>E-commerce PHP V3</h3>
+                        <p>Paiement et suivi de livraison avec une interface d'administration.</p>
+                        <a href="#" class="btn-text">En savoir plus &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/img/project2.svg" alt="Projet e-commerce PHP">
+                    </div>
+                    <div class="project-card__content">
+                        <h3>E-commerce PHP V4</h3>
+                        <p>Refonte UX mobile-first et optimisation des performances SQL.</p>
+                        <a href="#" class="btn-text">En savoir plus &rarr;</a>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/img/project2.svg" alt="Projet e-commerce PHP">
+                    </div>
+                    <div class="project-card__content">
+                        <h3>E-commerce PHP V5</h3>
+                        <p>Automatisation des emails transactionnels et tableau de bord metiers.</p>
+                        <a href="#" class="btn-text">En savoir plus &rarr;</a>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/img/project2.svg" alt="Projet e-commerce PHP">
                     </div>
                     <div class="project-card__content">
                         <h3>E-commerce PHP</h3>
@@ -89,9 +147,12 @@
             <h2 class="section-title">Me contacter</h2>
             <p>Un projet ou une opportunité d'alternance ? Discutons-en !</p>
             <form class="contact__form">
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Votre message" rows="5" required></textarea>
+                <label for="name">Nom</label>
+                <input id="name" name="name" type="text" placeholder="Nom" required>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
                 <button type="submit" class="btn-primary">Envoyer</button>
             </form>
         </section>
@@ -100,8 +161,8 @@
     <footer class="footer">
         <p>&copy; 2026 Adrien Ngassam - Tous droits réservés.</p>
         <div class="footer__socials">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://gitlab.com" target="_blank">GitLab</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://gitlab.com" target="_blank" rel="noopener noreferrer">GitLab</a>
         </div>
     </footer>
 

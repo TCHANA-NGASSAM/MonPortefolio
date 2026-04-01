@@ -1,41 +1,112 @@
 @import '../abstracts/variables';
 
 .hero {
-    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, $bg-light 0%, #e2e8f0 100%);
-    
-    h1 {
-        font-size: 3.5rem;
-        margin-bottom: 10px;
-        span { color: $primary-color; }
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: $hero-light; // Le fond gris clair de base (côté gauche)
+
+    // Partie de droite (Noire)
+    &__visual {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 53%; // On prend un peu plus de la moitié pour l'inclinaison
+        height: 100%;
+        background-color: $hero-dark;
+        
+        // LA MAGIE DU SLASH /
+        // On définit 4 points : haut-gauche(15% 0), haut-droit(100% 0), bas-droit(100% 100%), bas-gauche(0 100%)
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 1;
     }
 
-    p {
+    // Contenu texte (Gris)
+    &__intro {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+        z-index: 2; // Pour être au-dessus du fond gris
+    }
+
+    &__photo {
+        height: 90%; // Ta photo sans fond (PNG)
+        object-fit: contain;
+        // Petit ajustement pour que la photo ne soit pas coupée par le clip-path
+        margin-right: -10%; 
+    }
+
+    // Styles des textes (Basés sur ton screen)
+    &__name {
+        font-size: 4rem;
+        font-weight: 800;
+        color: $text-dark;
+        margin: 10px 0;
+    }
+
+    &__job {
         font-size: 1.2rem;
         color: $text-light;
-        margin-bottom: 30px;
+        font-weight: 600; 
+        text-transform: capitalize;
     }
 
-    &__btns {
+
+    &__socials {
         display: flex;
         gap: 15px;
-        justify-content: center;
+        margin-top: 40px;
+        
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            &:hover { background: $hero-dark; color: $white; }
+        }
     }
 }
 
-.btn-primary, .btn-secondary {
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: $transition;
+// Version Mobile : on empile les blocs au lieu du slash
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        
+        &__intro {
+            width: 100%;
+            padding: 100px 20px 50px;
+        }
+
+        &__name {
+            font-size: 2.2rem;
+        }
+
+        &__job {
+            font-size: 1rem;
+        }
+        
+        &__visual {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            clip-path: none; // On enlève l'oblique sur mobile
+        }
+
+        &__socials {
+            margin-top: 24px;
+        }
+    }
 }
-
-.btn-primary { background: $primary-color; color: $white; }
-.btn-primary:hover { background: darken($primary-color, 10%); }
-
-.btn-secondary { border: 2px solid $primary-color; color: $primary-color; }
-.btn-secondary:hover { background: $primary-color; color: $white; }

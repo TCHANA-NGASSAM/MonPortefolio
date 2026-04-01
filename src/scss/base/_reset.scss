@@ -36,3 +36,13 @@ a { text-decoration: none; color: inherit; }
         margin: 10px auto;
     }
 }
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="Illustration e-commerce">
+  <rect width="1200" height="700" fill="#0f172a"/>
+  <rect x="190" y="130" width="820" height="430" rx="24" fill="#1e293b"/>
+  <rect x="240" y="190" width="300" height="290" rx="16" fill="#334155"/>
+  <rect x="580" y="190" width="380" height="60" rx="10" fill="#475569"/>
+  <rect x="580" y="280" width="280" height="50" rx="10" fill="#64748b"/>
+  <rect x="580" y="360" width="180" height="90" rx="10" fill="#2563eb"/>
+  <text x="600" y="625" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="48" fill="#f8fafc">E-commerce PHP</text>
+</svg>
