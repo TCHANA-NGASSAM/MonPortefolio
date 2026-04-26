@@ -22,6 +22,16 @@ a { text-decoration: none; color: inherit; }
     padding: 20px 20px;
 }
 
+.about__alternance {
+    margin-top: 1.25rem;
+    padding: 1rem 1.25rem;
+    background: rgba(0, 0, 0, 0.06);
+    border-left: 4px solid $primary-color;
+    border-radius: 0 10px 10px 0;
+    line-height: 1.65;
+    color: $text-dark;
+}
+
 .section-title {
     text-align: center;
     font-size: 2.5rem;

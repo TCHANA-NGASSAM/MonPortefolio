@@ -1,5 +1,18 @@
 @import '../abstracts/variables';
 
+.contact__lead {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 28px;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: $text-dark;
+
+    strong {
+        font-weight: 800;
+    }
+}
+
 // Formulaire
 .contact__form {
     max-width: 600px;

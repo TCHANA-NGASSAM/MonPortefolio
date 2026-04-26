@@ -58,6 +58,36 @@
         text-transform: capitalize;
     }
 
+    &__alternance {
+        margin-top: 18px;
+        max-width: 420px;
+        font-size: 0.95rem;
+        line-height: 1.55;
+        color: $text-dark;
+
+        strong {
+            font-weight: 800;
+        }
+    }
+
+    &__cta {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 12px 22px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $white;
+        background: $hero-dark;
+        border-radius: 6px;
+        transition: $transition;
+
+        &:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+    }
 
     &__socials {
         display: flex;
@@ -96,6 +126,17 @@
 
         &__job {
             font-size: 1rem;
+        }
+
+        &__alternance {
+            max-width: none;
+            font-size: 0.9rem;
+        }
+
+        &__cta {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
         }
         
         &__visual {
