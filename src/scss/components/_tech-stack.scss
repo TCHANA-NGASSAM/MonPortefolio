@@ -54,7 +54,7 @@
 
     i {
         font-size: 1.6rem;
-        color: var(--group-accent);
+        color: var(--group-accent) !important;
     }
 
     span {
@@ -91,11 +91,11 @@
 .devicon-python-original { color: #3776ab !important; }
 .devicon-nodejs-plain { color: #339933 !important; }
 .devicon-php-plain { color: #777bb4 !important; }
-.devicon-symfony-plain { color: #111827 !important; }
+.devicon-symfony-plain { color: #2563eb !important; }
 .devicon-bash-plain { color: #4eaa25 !important; }
 .devicon-docker-plain { color: #2496ed !important; }
 .devicon-git-plain { color: #f05032 !important; }
-.devicon-github-original { color: #171515 !important; }
+.devicon-github-original { color: #6e5494 !important; }
 .devicon-gitlab-plain { color: #fc6d26 !important; }
 .devicon-githubactions-plain { color: #2088ff !important; }
 .devicon-jenkins-line { color: #d24939 !important; }

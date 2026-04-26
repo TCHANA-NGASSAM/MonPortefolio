@@ -15,3 +15,25 @@ document.querySelectorAll('.navbar__links a').forEach(link => {
         navMenu.classList.remove('active');
     });
 });
+
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+        }
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const to = 'adrienngassam@etu.digitalschool.fr';
+        const subject = encodeURIComponent(`Contact portfolio — ${name}`);
+        const body = encodeURIComponent(
+            `Bonjour,\n\n${message}\n\n---\nNom : ${name}\nEmail : ${email}\n`
+        );
+
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+}

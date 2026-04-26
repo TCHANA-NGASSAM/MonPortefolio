@@ -14,25 +14,83 @@
 }
 
 .contact__infos {
-    max-width: 760px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto 24px;
-    display: grid;
-    gap: 10px;
-    padding: 14px 16px;
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.05);
+    padding: 0;
+    text-align: center;
+    background: transparent;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
-    a,
-    span {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: $text-dark;
-        font-size: 0.95rem;
+.contact__infos-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.08);
+    color: $text-dark;
+    font-size: 0.95rem;
+}
+
+.contact__infos-text {
+    min-width: 0;
+    word-break: break-word;
+    text-align: center;
+}
+
+.contact__infos-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 14px;
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+.contact__infos-inline-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: $text-dark;
+    text-decoration: none;
+    font-size: 0.95rem;
+    flex: 0 0 auto;
+
+    .contact__infos-text {
+        text-align: center;
     }
 
-    i {
-        width: 16px;
+    &:hover .contact__infos-text {
+        text-decoration: underline;
+    }
+}
+
+.contact__infos-separator {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 1rem;
+    line-height: 1;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 480px) {
+    .contact__infos-inline {
+        gap: 10px;
+    }
+
+    .contact__infos-inline-item {
+        font-size: 0.88rem;
+    }
+
+    .contact__infos-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
     }
 }
 
