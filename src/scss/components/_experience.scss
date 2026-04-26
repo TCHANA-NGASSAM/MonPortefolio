@@ -23,6 +23,19 @@
     }
 }
 
+.experience__list {
+    margin: 10px 0 0;
+    padding-left: 18px;
+    list-style: disc;
+
+    li {
+        color: $text-light;
+        margin-bottom: 8px;
+        line-height: 1.55;
+        font-size: 0.94rem;
+    }
+}
+
 .experience__period {
     font-size: 0.82rem;
     font-weight: 700;

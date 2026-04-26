@@ -11,10 +11,11 @@
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 14px;
     padding: 20px;
+    --group-accent: #7c3aed;
 
     h3 {
         margin-bottom: 16px;
-        color: $text-dark;
+        color: var(--group-accent);
         font-size: 1.1rem;
     }
 
@@ -23,14 +24,27 @@
         flex-wrap: wrap;
         gap: 12px;
     }
+
+    &__list {
+        margin: 0;
+        padding-left: 18px;
+        list-style: disc;
+
+        li {
+            color: $text-light;
+            margin-bottom: 8px;
+            line-height: 1.5;
+            font-size: 0.94rem;
+        }
+    }
 }
 
 .tech-item {
     width: 92px;
     height: 92px;
     border-radius: 999px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    background: #f4f4f4;
+    border: 1px solid color-mix(in srgb, var(--group-accent) 35%, #000 8%);
+    background: color-mix(in srgb, var(--group-accent) 10%, #fff 90%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +54,7 @@
 
     i {
         font-size: 1.6rem;
-        color: unset;
+        color: var(--group-accent);
     }
 
     span {
@@ -54,30 +68,56 @@
 
     &:hover {
         transform: translateY(-4px);
-        background: #e7e7e7;
+        background: color-mix(in srgb, var(--group-accent) 16%, #fff 84%);
     }
 }
+
+.tech-group:nth-child(1) { --group-accent: #0ea5e9; }
+.tech-group:nth-child(2) { --group-accent: #6366f1; }
+.tech-group:nth-child(3) { --group-accent: #f97316; }
+.tech-group:nth-child(4) { --group-accent: #10b981; }
+.tech-group:nth-child(5) { --group-accent: #8b5cf6; }
 
 .devicon-html5-plain { color: #e34f26 !important; }
 .devicon-css3-plain { color: #1572b6 !important; }
 .devicon-javascript-plain { color: #f7df1e !important; }
+.devicon-typescript-plain { color: #3178c6 !important; }
+.devicon-typescript-original { color: #3178c6 !important; }
 .devicon-react-original { color: #61dafb !important; }
 .devicon-bootstrap-plain { color: #7952b3 !important; }
 .devicon-tailwindcss-original { color: #06b6d4 !important; }
+.devicon-sass-original { color: #cc6699 !important; }
+.devicon-python-plain { color: #3776ab !important; }
+.devicon-python-original { color: #3776ab !important; }
 .devicon-nodejs-plain { color: #339933 !important; }
 .devicon-php-plain { color: #777bb4 !important; }
-.devicon-symfony-plain { color: #000000 !important; }
+.devicon-symfony-plain { color: #111827 !important; }
+.devicon-bash-plain { color: #4eaa25 !important; }
 .devicon-docker-plain { color: #2496ed !important; }
 .devicon-git-plain { color: #f05032 !important; }
 .devicon-github-original { color: #171515 !important; }
 .devicon-gitlab-plain { color: #fc6d26 !important; }
+.devicon-githubactions-plain { color: #2088ff !important; }
+.devicon-jenkins-line { color: #d24939 !important; }
+.devicon-kubernetes-plain { color: #326ce5 !important; }
+.devicon-ansible-plain { color: #ee0000 !important; }
 .devicon-amazonwebservices-plain-wordmark { color: #ff9900 !important; }
 .devicon-googlecloud-plain { color: #4285f4 !important; }
 .devicon-mysql-plain { color: #4479a1 !important; }
 .devicon-postgresql-plain { color: #336791 !important; }
+.devicon-mongodb-plain { color: #47a248 !important; }
+.devicon-firebase-plain { color: #ffca28 !important; }
+.devicon-jira-plain { color: #0052cc !important; }
+.devicon-confluence-original { color: #172b4d !important; }
+.devicon-figma-plain { color: #f24e1e !important; }
 .fa-certificate { color: #d4a017 !important; }
 .fa-award { color: #6f42c1 !important; }
 .fa-shield-halved { color: #198754 !important; }
+.fa-gears { color: #0ea5e9 !important; }
+.fa-arrows-rotate { color: #0f766e !important; }
+.fa-table-columns { color: #7c3aed !important; }
+.fa-palette { color: #ec4899 !important; }
+.fa-solid { color: var(--group-accent); }
 
 @media (max-width: 768px) {
     .tech-stack__groups {
